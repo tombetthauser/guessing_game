@@ -5,19 +5,31 @@
 
 require_relative "guessing_game"
 
+system "clear"
+
+print "---------------------------------------------\n"
+print "|                                           |\n"
+print "|    Welcome to Tom's Ruby Guessing Game    |\n"
+print "|                                           |\n"
+print "---------------------------------------------\n\n"
+
 print "Enter a min number: "
 min = gets.chomp.to_i
 
 print "Enter a max number: "
 max = gets.chomp.to_i
 
-puts "I'm thinking of a number between #{min} and #{max}"
+puts "\nA number between #{min} and #{max} has been chosen.\n"
 
 guessing_game = GuessingGame.new(min, max)
 
 until guessing_game.game_over?
   guessing_game.ask_user
-  puts "---------------"
+  print "\n"
 end
 
-puts "You won in #{guessing_game.num_attempts} tries"
+puts "You've succeeded in #{guessing_game.num_attempts} tries. Well Done."
+print "\nPress any key to exit."
+gets
+system "clear"
+
