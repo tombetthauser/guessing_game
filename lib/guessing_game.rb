@@ -95,7 +95,7 @@ class GuessingGame
 
   def end_game
     if @winner == true
-      print "\nCongratulations #{@user_name[0].upcase + @user_name[1..-1].downcase}, you've guessed correctly."
+      print "Congratulations #{@user_name[0].upcase + @user_name[1..-1].downcase}, you've guessed correctly."
       print "\nYou succeeded in #{@num_attempts} tries with #{@max_attempts - @num_attempts} remaining. Well done."
       print "\n\nPress any key to exit."
       `afplay lib/sound.wav`
